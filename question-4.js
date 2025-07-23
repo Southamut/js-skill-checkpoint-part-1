@@ -10,9 +10,9 @@ let minQuantity = Infinity
 let fruitName;
 for (let fruit of inventory) {
   if (fruit.quantity < minQuantity) {
-    minQuantity = fruit.quantity
-    fruitName = fruit.name
+    minQuantity = fruit.quantity;
+    fruitName = fruit.name;
   }
 }
 
-console.log(`สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ ${fruitName} ซึ่งมี ${minQuantity} ชิ้น`)
+console.log(`สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ ${fruitName} ซึ่งมี ${minQuantity} ชิ้น`);
