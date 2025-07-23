@@ -9,7 +9,7 @@ inventory.push({ name: "Orange", price: 20, quantity: 300 })
 
 //Find totoalPrice
 totalPrice = 0
-for (fruit of inventory) {
+for (let fruit of inventory) {
   totalPrice += fruit.price * fruit.quantity
 }
 
