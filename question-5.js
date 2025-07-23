@@ -20,18 +20,24 @@ const products = [
 const promotionCode = ""
 // เริ่มเขียนโค้ดตรงนี้
 
+//Update code by calculate totalPrice before discout
 function calculateTotalPrice(products, promotionCode) {
+  //Find total
   let totalPrice = 0;
   for (let goods of products) {
-    if (promotionCode === "SALE20") {
-      totalPrice += 0.8 * (goods.price * goods.quantity);
-    } else if (promotionCode === "SALE50") {
-      totalPrice += 0.5 * (goods.price * goods.quantity);
-    } else {
-      totalPrice += goods.price * goods.quantity;
-    }
+    totalPrice += goods.price * goods.quantity;
+  }
+  //Discount
+  if (promotionCode === "SALE20") {
+    totalPrice *= 0.8;
+  } else if (promotionCode === "SALE50") {
+    totalPrice *= 0.5;
+  } else {
+    totalPrice;
   }
   return totalPrice;
 }
 
+// const promotionCode = "SALE20"
+// const promotionCode = "SALE50"
 console.log(calculateTotalPrice(products, promotionCode));
